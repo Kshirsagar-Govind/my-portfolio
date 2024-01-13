@@ -1,0 +1,54 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body{
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 40.5%;
+  }
+  .mobile-navbar-section {
+    display: none;
+  }
+}
+
+/* @media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 40.5%;
+  }
+  .mobile-navbar-section {
+    display: none;
+  }
+}
+.mobile-navbar-section {
+  display: none;
+} */
+
+.menu-btn div {
+  background-color: var(--primary);
+  width: 5rem;
+  height: 0.5rem;
+  transform: scaleX(100%);
+  margin: 1rem;
+  transition: 0.2s;
+  transform-origin: right;
+}
+
+/* .menu-btn-open div {
+  background-color: var(--primary);
+  width: 5rem;
+  height: 0.5rem;
+  margin: 1rem;
+  transform: scaleX(40%);
+} */
+
+
+.hero-section .illustration-part img {
+  width: 500px;
+  height: 400px;
+  border-radius: 2rem;
+}

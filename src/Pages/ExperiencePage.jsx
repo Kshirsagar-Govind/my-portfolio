@@ -2,20 +2,16 @@ import React, { Component, useEffect, useState } from "react";
 import "../index.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import SectionTitle from "../Helpers/SectionHeader";
 
 function ExperiencePage() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   });
   return (
-    <div className="MyWorkPage">
-      <div className="page-title-div">
-        <div className="vr-line" />
-        <h1>
-          Work
-          <span className="prim-color"> Experience</span>
-        </h1>
-      </div>
+    <div className="MyWorkPage px-2">
+          
+      <SectionTitle title={"Work Experience"}/>
       <div className="exp-section" data-aos="fade-in" data-aos-once="true">
         <h3>⦾ medtigo, Pune (WFH)</h3>
         <h4>Dec 2022 - Present</h4>

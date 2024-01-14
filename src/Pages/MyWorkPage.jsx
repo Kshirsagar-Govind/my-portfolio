@@ -6,6 +6,7 @@ import Git from "../Assets/WorkSS/git.png";
 import Linkedin from "../Assets/WorkSS/linkedin.png";
 import Medium from "../Assets/WorkSS/medium.png";
 import { useEffect } from "react";
+import SectionTitle from "../Helpers/SectionHeader";
 
 function MyWork() {
   const [showWork, _setShowWork] = useState();
@@ -20,12 +21,12 @@ function MyWork() {
       valu == 1
         ? resume_url
         : valu == 2
-        ? git_url
-        : valu == 3
-        ? medium_url
-        : valu == 4
-        ? linkedin_url
-        : resume_url;
+          ? git_url
+          : valu == 3
+            ? medium_url
+            : valu == 4
+              ? linkedin_url
+              : resume_url;
     window.open(url, "_blank");
   };
 
@@ -34,149 +35,293 @@ function MyWork() {
   });
 
   return (
-    <div className="MyWorkPage">
-      <div className="page-title-div">
-        <div className="vr-line" />
-        <h1>
-          Personal
-          <span className="prim-color"> Projects</span>
-        </h1>
-      </div>
-      <div className="make-it-centered">
-        <div className="work-section">
-          <div
-            className="work-card-container"
-            data-aos-once="true"
-            data-aos="fade-up"
-          >
-            <span>
-              <h1>Resume Builder</h1>
-              <p>
-                Lots of time we try to make our resume more interesting but end
-                up just thinking about design, and lasltly we drop our creative
-                ideas and keep it very simple way. But if you want to have some
-                unique design for your resume please take look at my Resume
-                Builder.
-              </p>
-            </span>
-            <div className="show-work">
+    <div className="MyWorkPage mt-10">
+      <SectionTitle title={'Personal Projects'} />
+
+      <div className="hidden md:block">
+
+        <div className="make-it-centered mt-6">
+          <div className="work-section flex flex-wrap gap-10">
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
               <span>
-                <a
-                  className="work-btn text-no-style"
-                  href="/project-resume-builder"
-                >
-                  Case Study
-                </a>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >Resume Builder</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-resume-builder"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <p>
+                  Lots of time we try to make our resume more interesting but end
+                  up just thinking about design, and lasltly we drop our creative
+                  ideas and keep it very simple way. But if you want to have some
+                  unique design for your resume please take look at my Resume
+                  Builder.
+                </p>
               </span>
             </div>
-          </div>
 
-          <div
-            className="work-card-container"
-            data-aos-once="true"
-            data-aos="fade-up"
-          >
-            <span>
-              <h1>eCommerce Website</h1>
-              <p>
-                To learn and practice advance functionalities in MERN stack, I
-                have created this ecommerce website, where user can see
-                different electronics product and can do various things on the
-                website related to product.
-              </p>
-            </span>
-            <div className="show-work">
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
               <span>
-                <a className="work-btn text-no-style" href="/project-ecom">
-                  Case Study
-                </a>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >eCommerce Website</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-ecom"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <p>
+                  To learn and practice advance functionalities in MERN stack, I
+                  have created this ecommerce website, where user can see
+                  different electronics product and can do various things on the
+                  website related to product.
+                </p>
               </span>
             </div>
-          </div>
 
-          <div
-            className="work-card-container"
-            data-aos-once="true"
-            data-aos="fade-up"
-          >
-            <span>
-              <h1>Form Creater</h1>
-              <p>
-                Created a form generater. Here you can design forms with different types of inputs and also edit them after saving.
-              </p>
-            </span>
-            <div className="show-work">
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
               <span>
-                <a className="work-btn text-no-style" href="/project-forms">
-                  Case Study
-                </a>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >Form Creater</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-forms"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+
+                <p>
+                  Created a form generater. Here you can design forms with different types of inputs and also edit them after saving.
+                </p>
               </span>
             </div>
-          </div>
 
-          <div
-            className="work-card-container"
-            data-aos-once="true"
-            data-aos="fade-up"
-          >
-            <span>
-              <h1>Note It Down</h1>
-              <p>
-                We have lot's of things to note in everyday, so simple
-                application I made in react where we can add notes, expense,
-                save password and can add tasks.
-              </p>
-            </span>
-            <div className="show-work">
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
               <span>
-                <a
-                  className="work-btn text-no-style"
-                  href="/project-note-it-down"
-                >
-                  Case Study
-                </a>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >Note It Down</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-note-it-down"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <p>
+                  We have lot's of things to note in everyday, so simple
+                  application I made in react where we can add notes, expense,
+                  save password and can add tasks.
+                </p>
               </span>
             </div>
-          </div>
-
-          <div
-            className="work-card-container"
-            data-aos-once="true"
-            data-aos="fade-up"
-          >
-            <span>
-              <h1>Make Note</h1>
-              <p>
-                Most of the time, I work on some ideas and get into some
-                important issues or solutions but I need to note all this things
-                somewhere, and that's what my project is - Make Not. This is
-                similar to Note It Down project to the some extent.
-              </p>
-            </span>
-            <div className="show-work">
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
               <span>
-                <a className="work-btn text-no-style" href="/project-make-note">
-                  Case Study
-                </a>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >Make Note</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-make-note"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <p>
+                  Most of the time, I work on some ideas and get into some
+                  important issues or solutions but I need to note all this things
+                  somewhere, and that's what my project is - Make Not. This is
+                  similar to Note It Down project to the some extent.
+                </p>
               </span>
+
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="social-section">
-          <div className="socials-logo">
-            <img onClick={() => newTabLink(2)} src={Git} alt="img" />
-            {/* <img onClick={() => newTabLink(3)} src={Medium} alt="img" /> */}
-            <img onClick={() => newTabLink(4)} src={Linkedin} alt="img" />
-          </div>
-          <div className="hr-line" />
-          <div className="resume-btn">
-            <button style={{ cursor: "pointer" }} onClick={() => newTabLink(1)}>
-              RESUME
-            </button>
+
+      <div className="sm:block md:hidden">
+        <div className="make-it-centered mt-6">
+          <div className="work-section flex flex-col items-center align-middle gap-10">
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
+              <span>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >Resume Builder</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-resume-builder"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <p>
+                  Lots of time we try to make our resume more interesting but end
+                  up just thinking about design, and lasltly we drop our creative
+                  ideas and keep it very simple way. But if you want to have some
+                  unique design for your resume please take look at my Resume
+                  Builder.
+                </p>
+              </span>
+            </div>
+
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
+              <span>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >eCommerce Website</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-ecom"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <p>
+                  To learn and practice advance functionalities in MERN stack, I
+                  have created this ecommerce website, where user can see
+                  different electronics product and can do various things on the
+                  website related to product.
+                </p>
+              </span>
+            </div>
+
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
+              <span>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >Form Creater</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-forms"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+
+                <p>
+                  Created a form generater. Here you can design forms with different types of inputs and also edit them after saving.
+                </p>
+              </span>
+            </div>
+
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
+              <span>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >Note It Down</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-note-it-down"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <p>
+                  We have lot's of things to note in everyday, so simple
+                  application I made in react where we can add notes, expense,
+                  save password and can add tasks.
+                </p>
+              </span>
+            </div>
+            <div
+              className="work-card-container border-2 hover:border-secondary border-gray-400 rounded-lg w-[450px] py-4 px-5"
+              data-aos-once="true"
+              data-aos="fade-up"
+            >
+              <span>
+                <div className="flex justify-between items-center mb-4">
+                  <h1 className="text-3xl" >Make Note</h1>
+                  <div className="p-2 transition-all text-center text-secondary hover:text-pure text-lg hover:bg-secondary show-work rounded-md w-fit">
+                    <span>
+                      <a
+                        href="/project-make-note"
+                      >
+                        View
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <p>
+                  Most of the time, I work on some ideas and get into some
+                  important issues or solutions but I need to note all this things
+                  somewhere, and that's what my project is - Make Not. This is
+                  similar to Note It Down project to the some extent.
+                </p>
+              </span>
+
+            </div>
           </div>
         </div>
       </div>
+
+
+
+
+
     </div>
   );
 }
